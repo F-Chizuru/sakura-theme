@@ -9,8 +9,8 @@
     <title>サイトのタイトル</title>
 
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="./css/style_pc.css">
-	<link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="./css/style_sp.css">
+    <link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="<?php echo get_template_directory_uri(); ?>//css/style_pc.css">
+	<link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="<?php echo get_template_directory_uri(); ?>//css/style_sp.css">
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <!-- drawer.css -->
@@ -84,7 +84,7 @@
                         <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam laborum, sint earum similique quidem harum reiciendis tempora repellendus dignissimos sequi libero doloribus optio. Reprehenderit similique tempora hic eum eos dolorum sapiente ullam debitis? Id voluptatibus eum doloremque tempora sapiente aut dolores fugiat ea excepturi consequatur facere vero repudiandae cumque consequuntur, maxime autem omnis repellat amet veniam perferendis saepe. Voluptatibus.</p>
                 </div>
-                <img src="img/photo_02.png" alt="プロフィール画像" >
+                <img src="<?php echo get_template_directory_uri(); ?>/img/photo_02.png" alt="プロフィール画像" >
             </div>
         </section>
 
@@ -93,17 +93,17 @@
             <h1>制作実績</h1>
             <div class="portfolio">
                 <div class="portfolio-content">
-                    <img src="img/thumb_01.png" alt="あいうえお建設様">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="あいうえお建設様">
                     <h2>あいうえお建設様</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam hic, saepe quia, officia sequi id alias deleniti nemo excepturi molestias amet nostrum aspernatur laborum quaerat molestiae architecto culpa, ratione at.</p>
                 </div>
                 <div class="portfolio-content">
-                    <img src="img/thumb_02.png" alt="かきくけこ産業">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_02.png" alt="かきくけこ産業">
                     <h2>かきくけこ産業様</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi vitae repudiandae a sit, quo ex omnis eligendi facilis animi fugiat, minus amet alias dignissimos maxime delectus. Ex dolor dolorum ipsa!</p>
                 </div>
                 <div class="portfolio-content">
-                    <img src="img/thumb_03.png" alt="さしすせそ興業様">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_03.png" alt="さしすせそ興業様">
                     <h2>さしすせそ興業様</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, autem consequuntur! Quae quibusdam eaque inventore, architecto at rerum. Consectetur placeat nostrum cupiditate similique corrupti quos officiis voluptatum ipsam optio veniam?</p>
                 </div>
@@ -117,7 +117,7 @@
             <h1>新着記事</h1>
             <div class="blog">
                 <div class="blog-content" >
-                    <img src="img/thumb_01.png" alt="ブログ1サムネイル">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
                     <div class="blog-info">
                         <h2>タイトルが入ります</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis aliquid eius
