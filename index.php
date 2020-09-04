@@ -25,6 +25,7 @@
 <link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="./css/style_pc.css">
 <link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="./css/style_sp.css">
 
+<?php wp_head(); ?>
     </head>
 
 <body  class="drawer drawer--right">
@@ -61,7 +62,7 @@
     </header>   
      <article>
         <section id="sec1-firstview">
-            <h1>ブログタイトル</h1>
+            <h1><?php bloginfo('name'); ?></h1>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa a at, reiciendis aspernatur aliquam
                     dolore quae dolorum nihil saepe consequatur sunt suscipit atque maiores unde sed, quidem fugiat sit
@@ -116,15 +117,21 @@
         <section id="sec4-newblog" class="slide-bottom" data-plugin-options='{"speed":300,"reverse": false}'>
             <h1>新着記事</h1>
             <div class="blog">
+
+            <?php if(have_posts()):?>
+            <?php while (have_posts()) : the_post(); ?>
                 <div class="blog-content" >
                     <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
                     <div class="blog-info">
-                        <h2>タイトルが入ります</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis aliquid eius
-                            blanditiis atque itaque quas ullam iusto veniam. Neque!</p>
-                        <a href="#"><i class="fas fa-globe-americas"></i>カテゴリ名</a><a href="#"><i class="fas fa-globe-americas"></i>2019.07.25</a>
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php the_content(); ?></p>
+                        <a href="#"><i class="fas fa-globe-americas"></i><?php the_category(); ?></a><a href="#"><i class="fas fa-globe-americas"></i><?php the_date(); ?></a>
                     </div>
                 </div>
+            <?php endwhile; ?>
+            <?php else:?>
+            <p>新着記事はまだありません</p>
+            <?php endif; ?>
             </div>
         </section>
 
@@ -165,6 +172,7 @@
     <footer>
         <p class="copyright">Copyright &copy; DEMO all rights reserved.</p>
     </footer>
+    <?php wp_footer(); ?>
 </body>
 
 </html>
