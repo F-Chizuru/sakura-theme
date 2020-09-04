@@ -1,4 +1,3 @@
-<p>git管理はじめるよ</p>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
