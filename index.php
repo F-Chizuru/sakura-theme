@@ -1,4 +1,5 @@
  <?php get_header(); ?>
+ 
       <article>
         <section id="sec1-firstview">
             <h1><?php bloginfo('name'); ?></h1>
@@ -105,14 +106,4 @@
         </section>
     </article>
 
-
-
-    <button id="pagetop"><a href="#"> page top</a></button>
-
-    <footer>
-        <p class="copyright">Copyright &copy; DEMO all rights reserved.</p>
-    </footer>
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer(); ?>
