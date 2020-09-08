@@ -12,7 +12,8 @@ add_action('after_setup_theme','sakura_theme_setup');
 // styleとscriptを追加
 function sakura_theme_scripts(){
     wp_enqueue_style('theme-style', get_stylesheet_uri());
-    wp_enqueue_style('pc-style', get_template_directory_uri().'/css/style_pc.css');
+    wp_enqueue_style('pc-style', get_template_directory_uri().'/css/style_pc.css', array(), false, 'screen and ( min-width:769px )');
+    wp_enqueue_style('sp-style', get_template_directory_uri().'/css/style_sp.css', array(), false, 'screen and ( max-width:768px )');
 
     wp_enqueue_script('common', get_template_directory_uri().'/js/common.js');
     
