@@ -13,7 +13,7 @@ function sakura_theme_init() {
         "labels" => [
             "name" => "商品" // 管理画面に表示される名前
         ],
-        "public" => true, // 公開を許可
+        "public" => true,// 公開を許可
         "has_archive" => true, // アーカイブの作成を許可
         "hierarchical" => true, // 継承を持たせる
         "menu_position" => 15, // メニューバーに表示される場所
