@@ -1,11 +1,27 @@
 <?php
 
+// テーマに機能を追加
 function sakura_theme_setup() {
     add_theme_support( 'post-thumbnails' );
 }
-
-
 add_action('after_setup_theme','sakura_theme_setup');
+
+
+function sakura_theme_init() {
+     register_post_type( 'items',[    // itemsという投稿タイプを追加
+        "labels" => [
+            "name" => "商品" // 管理画面に表示される名前
+        ],
+        "public" => true, // 公開を許可
+        "has_archive" => true, // アーカイブの作成を許可
+        "hierarchical" => true, // 継承を持たせる
+        "menu_position" => 15, // メニューバーに表示される場所
+        "menu_icon" => "", // dashicon
+        "show_in_rest" => true, // 新エディタ
+    ] );
+}
+add_action('init','sakura_theme_init');
+
 // 'どのタイミングでフックさせるか'、'フックさせる関数'
 
 
