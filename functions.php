@@ -5,6 +5,7 @@ function sakura_theme_setup() {
     add_theme_support( 'post-thumbnails' );
 }
 add_action('after_setup_theme','sakura_theme_setup');
+// 'どのタイミングでフックさせるか'、'フックさせる関数'
 
 
 function sakura_theme_init() {
@@ -16,13 +17,12 @@ function sakura_theme_init() {
         "has_archive" => true, // アーカイブの作成を許可
         "hierarchical" => true, // 継承を持たせる
         "menu_position" => 15, // メニューバーに表示される場所
-        "menu_icon" => "", // dashicon
+        "menu_icon" => "dashicons-nametag", // dashicon
         "show_in_rest" => true, // 新エディタ
     ] );
 }
 add_action('init','sakura_theme_init');
 
-// 'どのタイミングでフックさせるか'、'フックさせる関数'
 
 
 // styleとscriptを追加
