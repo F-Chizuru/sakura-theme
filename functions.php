@@ -24,6 +24,19 @@ function sakura_theme_init() {
 add_action('init','sakura_theme_init');
 
 
+// 投稿アーカイブを有効にしてスラッグを指定する
+function post_has_archive( $args, $post_type ) {
+
+    if ( 'post' == $post_type ) {
+        $args['rewrite'] = true;
+        $args['has_archive'] = 'news'; // スラッグ名
+    }
+    return $args;
+
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
 
 // styleとscriptを追加
 function sakura_theme_scripts(){
